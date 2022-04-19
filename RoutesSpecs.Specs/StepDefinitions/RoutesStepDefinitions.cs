@@ -1,3 +1,5 @@
+using Routes;
+
 namespace RoutesSpecs.Specs.StepDefinitions
 {
     [Binding]
@@ -17,43 +19,66 @@ namespace RoutesSpecs.Specs.StepDefinitions
         [When(@"creating possible routes")]
         public void WhenCreatingPossibleRoutes()
         {
-            throw new PendingStepException();
+            RouteList routeList = new RouteList();
+            routeList = routeList.createRouteList(routeList, context.Get<string>("file"));
+            context.Add("routeList", routeList);
         }
 
         [When(@"looking at a certain route number (.*)")]
-        public void WhenLookingAtACertainRoute(int p0)
+        public void WhenLookingAtACertainRoute(int index)
         {
-            throw new PendingStepException();
+            Route route = context.Get<RouteList>("routeList").routeList[index];
+            context.Add("route", route);
         }
 
         [Then(@"the first city should be (.*)")]
-        public void ThenTheFirstCityShouldBe(string firstCity)
+        public void ThenTheFirstCityShouldBe(string shouldBeFirstCity)
         {
-            throw new PendingStepException();
+            context.Get<Route>("route").firstCity.Should().Be(shouldBeFirstCity);
         }
 
         [Then(@"the second city should be (.*)")]
-        public void ThenTheSecondCityShouldBe(string secondCity)
+        public void ThenTheSecondCityShouldBe(string shouldBeSecondCity)
         {
-            throw new PendingStepException();
+            context.Get<Route>("route").secondCity.Should().Be(shouldBeSecondCity);
         }
 
         [Then(@"the distance should be (.*)")]
-        public void ThenTheDistanceShouldBe(int p0)
+        public void ThenTheDistanceShouldBe(int shouldBeDistance)
         {
-            throw new PendingStepException();
+            context.Get<Route>("route").distance.Should().Be(shouldBeDistance);
         }
 
-        [When(@"finding the best routes")]
-        public void WhenFindingTheBestRoutes()
+        [When(@"finding the best route")]
+        public void WhenFindingTheBestRoute()
         {
-            throw new PendingStepException();
+            BestRoute bestRoute = new BestRoute();
+            bestRoute = bestRoute.getBestRoute(context.Get<RouteList>("routeList"));
+            context.Add("bestRoute", bestRoute);
         }
 
-        [Then(@"the third city should be (.*)")]
-        public void ThenTheThirdCityShouldBe(string thirdCity)
+        [Then(@"the best first city should be (.*)")]
+        public void ThenTheBestFirstCityShouldBe(string shouldBeBestFirstCity)
         {
-            throw new PendingStepException();
+            context.Get<BestRoute>("bestRoute").bestRouteCitiesList[0].Should().Be(shouldBeBestFirstCity);
+        }
+
+        [Then(@"the best second city should be (.*)")]
+        public void ThenTheBestSecondCityShouldBe(string shouldBeBestSecondCity)
+        {
+            context.Get<BestRoute>("bestRoute").bestRouteCitiesList[1].Should().Be(shouldBeBestSecondCity);
+        }
+
+        [Then(@"the best third city should be (.*)")]
+        public void ThenTheBestThirdCityShouldBe(string shouldBeBestThirdCity)
+        {
+            context.Get<BestRoute>("bestRoute").bestRouteCitiesList[2].Should().Be(shouldBeBestThirdCity);
+        }
+
+        [Then(@"the best distance should be (.*)")]
+        public void ThenTheBestDistanceShouldBe(int shouldBeBestDistance)
+        {
+            context.Get<BestRoute>("bestRoute").bestDistance.Should().Be(shouldBeBestDistance);
         }
     }
 }
