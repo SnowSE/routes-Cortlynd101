@@ -10,7 +10,6 @@ namespace Routes
         {
             routeList = new List<Route>();
         }
-
         public RouteList createRouteList(RouteList routeList, string filePath)
         {
             string line;
