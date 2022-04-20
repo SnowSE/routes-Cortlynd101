@@ -35,7 +35,9 @@ namespace RoutesSpecs.Specs.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Routes", "! This test", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Routes", "! This feature will take in a file with routes listed and make them into a list. " +
+                    "It will then use that list to determine what the best possible route is while to" +
+                    "uching place in the list.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -115,8 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("the text file C:\\Users\\Cortl\\source\\repos\\routes-Cortlynd101\\Routes\\TestInput.txt" +
-                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the text file C:\\Users\\Tyler\\Desktop\\Fastest Path\\Routes\\TestInput.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  testRunner.When("creating possible routes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -165,8 +166,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 19
- testRunner.Given("the text file C:\\Users\\Cortl\\source\\repos\\routes-Cortlynd101\\Routes\\TestInput.txt" +
-                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the text file C:\\Users\\Tyler\\Desktop\\Fastest Path\\Routes\\TestInput.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 20
  testRunner.When("creating possible routes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -218,7 +218,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 28
- testRunner.Given("the text file C:\\Users\\Cortl\\Source\\Repos\\routes-Cortlynd101\\Routes\\Input.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the text file C:\\Users\\Tyler\\Desktop\\Fastest Path\\Routes\\TestInput.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 29
  testRunner.When("creating possible routes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
