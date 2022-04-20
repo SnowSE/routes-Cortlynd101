@@ -117,7 +117,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("the text file C:\\Users\\Tyler\\Desktop\\Fastest Path\\Routes\\TestInput.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the text file C:\\Users\\Cortl\\Source\\Repos\\routes-Cortlynd101\\Routes\\TestInput.txt" +
+                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  testRunner.When("creating possible routes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -166,7 +167,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 19
- testRunner.Given("the text file C:\\Users\\Tyler\\Desktop\\Fastest Path\\Routes\\TestInput.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the text file C:\\Users\\Cortl\\Source\\Repos\\routes-Cortlynd101\\Routes\\TestInput.txt" +
+                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 20
  testRunner.When("creating possible routes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -218,7 +220,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 28
- testRunner.Given("the text file C:\\Users\\Tyler\\Desktop\\Fastest Path\\Routes\\TestInput.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the text file C:\\Users\\Cortl\\Source\\Repos\\routes-Cortlynd101\\Routes\\Input.txt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 29
  testRunner.When("creating possible routes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -227,16 +229,16 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("finding the best route", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
- testRunner.Then("the best first city should be toBeDetermined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the best first city should be Faerun", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 32
- testRunner.Then("the best second city should be toBeDetermined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the best second city should be AlphaCentauri", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 33
- testRunner.Then("the best third city should be toBeDetermined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the best third city should be Snowdin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 34
- testRunner.Then("the distance should be toBeDetermined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the best distance should be 10000109", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

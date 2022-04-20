@@ -3,7 +3,7 @@
 
 @mytag
 Scenario Outline: Creating Possible Routes
-	Given the text file C:\Users\Tyler\Desktop\Fastest Path\Routes\TestInput.txt
+	Given the text file C:\Users\Cortl\Source\Repos\routes-Cortlynd101\Routes\TestInput.txt
 	When creating possible routes
 	When looking at a certain route number <number>
 	Then the first city should be <firstCity>
@@ -16,7 +16,7 @@ Scenario Outline: Creating Possible Routes
 	| 2      | Dublin    | Belfast    | 141      |
 
 Scenario: Check Best Route Small Sample
-	Given the text file C:\Users\Tyler\Desktop\Fastest Path\Routes\TestInput.txt
+	Given the text file C:\Users\Cortl\Source\Repos\routes-Cortlynd101\Routes\TestInput.txt
 	When creating possible routes
 	When finding the best route
 	Then the best first city should be London
@@ -25,10 +25,10 @@ Scenario: Check Best Route Small Sample
 	Then the best distance should be 605
 
 Scenario: Check Best Route Large Sample
-	Given the text file C:\Users\Tyler\Desktop\Fastest Path\Routes\TestInput.txt
+	Given the text file C:\Users\Cortl\Source\Repos\routes-Cortlynd101\Routes\Input.txt
 	When creating possible routes
 	When finding the best route
-	Then the best first city should be toBeDetermined
-	Then the best second city should be toBeDetermined
-	Then the best third city should be toBeDetermined
-	Then the distance should be toBeDetermined
+	Then the best first city should be Faerun
+	Then the best second city should be AlphaCentauri
+	Then the best third city should be Snowdin
+	Then the best distance should be 10000109

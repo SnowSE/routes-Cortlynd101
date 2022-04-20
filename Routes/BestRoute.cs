@@ -18,9 +18,7 @@ namespace Routes
 
             TraverseBestPath(bestPath, paths, initialCity);
             return bestPath;
-
         }
-
 
         private void TraverseBestPath(BestRoute bestPath, List<Route> paths, string initialCity)
         {
@@ -31,7 +29,6 @@ namespace Routes
                 FindNextBestRoute(bestPath, paths, initialCity);
             }
         }
-
 
         private void FindNextBestRoute(BestRoute bestPath, List<Route> paths, string initialCity)
         {
@@ -54,8 +51,6 @@ namespace Routes
 
             AddCityToList(bestPath, paths, smallestRouteDistance, smallestRouteIndex);
         }
-
-
         private void AddCityToList(BestRoute bestPath, List<Route> paths, int smallestRouteDistance, int smallestRouteIndex)
         {
             if (CheckIfCityInList(paths[smallestRouteIndex].secondCity, bestPath.bestRouteCitiesList) == false)
@@ -65,8 +60,6 @@ namespace Routes
                 paths.Remove(paths[smallestRouteIndex]);
             }
         }
-
-
         public bool CheckIfCityInList(string cityToCheck, List<string> listToCheck)
         {
             bool cityIsInList = false;
